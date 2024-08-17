@@ -1,0 +1,3 @@
+Segmentation of a Image happening, helps in object detection.
+
+Mask layer importance.
