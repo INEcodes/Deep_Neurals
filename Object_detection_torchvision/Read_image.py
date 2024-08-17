@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 from torchvision.io import read_image
 
 
-image = read_image("C:/Users/Abhay/Documents/GitHub/Deep_Neurals/Object_detection_torchvision/PennFudanPed/PNGImages/FudanPed00046.png")
-mask = read_image("C:/Users/Abhay/Documents/GitHub/Deep_Neurals/Object_detection_torchvision/PennFudanPed/PedMasks/FudanPed00046_mask.png")
+mask = read_image("Object_detection_torchvision/PennFudanPed/PedMasks/FudanPed00046_mask.png")
+image = read_image("Object_detection_torchvision/PennFudanPed/PNGImages/FudanPed00046.png")
 
 plt.figure(figsize=(16, 8))
 plt.subplot(121)
