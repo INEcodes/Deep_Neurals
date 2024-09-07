@@ -33,7 +33,13 @@ print(f'Class_id : {weights.meta["categories"][class_id]}, Score:{score}')
 This provides us the model to guess the animal from the image of the animal.
 
 Here we see the output as ibex for a tahr, but this is an understanable error as they are quite similar.
+
+As Ibex are known as Himalayan tahr.
 '''
+
+# the below code provides all the possible categories for our image, here for me it would be  345:355
+print(weights.meta["categories"][345:355])
+#this gives the close results which can be confussing for anyone without any knowledge.
 
 
 
