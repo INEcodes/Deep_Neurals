@@ -1,0 +1,11 @@
+#using ollama for the working of the llama in the local storage.
+
+#set the base model:
+FROM llama3:8b
+
+
+#set custom parameter values
+
+PARAMETER temperature 1
+
+PARAMETER stop 
