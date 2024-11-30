@@ -1,0 +1,41 @@
+digraph {
+	graph [rankdir=LR]
+	dpi=100
+	Input [label="Input
+(3x32x32)" fillcolor=lightblue shape=box style=filled]
+	Conv1 [label="Conv2D
+32 filters
+3x3 kernel" fillcolor=lightgreen shape=box style=filled]
+	Conv2 [label="Conv2D
+64 filters
+3x3 kernel" fillcolor=lightgreen shape=box style=filled]
+	Conv3 [label="Conv2D
+128 filters
+3x3 kernel" fillcolor=lightgreen shape=box style=filled]
+	Pool1 [label="MaxPool2D
+2x2" fillcolor=lightyellow shape=ellipse style=filled]
+	Pool2 [label="MaxPool2D
+2x2" fillcolor=lightyellow shape=ellipse style=filled]
+	Pool3 [label="MaxPool2D
+2x2" fillcolor=lightyellow shape=ellipse style=filled]
+	Flatten [label="Flatten
+128x4x4 → 2048" fillcolor=lightpink shape=box style=filled]
+	FC1 [label="Dense
+512 units
+ReLU" fillcolor=lightgrey shape=box style=filled]
+	Dropout [label="Dropout
+0.25" fillcolor=lightcoral shape=ellipse style=filled]
+	FC2 [label="Dense
+10 units
+Softmax" fillcolor=lightgrey shape=box style=filled]
+	Input -> Conv1
+	Conv1 -> Pool1
+	Pool1 -> Conv2
+	Conv2 -> Pool2
+	Pool2 -> Conv3
+	Conv3 -> Pool3
+	Pool3 -> Flatten
+	Flatten -> FC1
+	FC1 -> Dropout
+	Dropout -> FC2
+}
