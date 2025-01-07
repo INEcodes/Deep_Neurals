@@ -87,7 +87,7 @@ model.fit(X, Y, batch_size=1, epochs=400, verbose=1)
 model.evaluate(X, Y, batch_size=1)
 
 # Load and preprocess image
-img_path = 'Image_colorization/Keras_implementation/Data/Test/Gray_33.jpg'
+img_path = 'Image_colorization/Keras_implementation/Data/Test/Gray_rural33.jpeg'
 
 img = load_img(img_path, target_size=(100, 100), color_mode="grayscale")
 img = img_to_array(img) / 255.0
